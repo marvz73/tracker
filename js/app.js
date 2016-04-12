@@ -34,7 +34,12 @@ angular.module('tracker', ['ui.router', 'ngMap'])
 		{
 			alert("Browser doesn't support Geolocation");
 		}
+
+		console.log(map)
+		
 	});
+
+	console.log("Run")
 
 })
 
@@ -112,16 +117,19 @@ angular.module('tracker', ['ui.router', 'ngMap'])
     //   }
     // });
 
-	
+})
 
+.controller('InitCtrl', function($scope, NgMap, $state) {
+
+	$scope.showDetails = function()
+	{
+		$state.go('location');
+	}
 
 })
 
 .controller('HomeCtrl', function($scope, NgMap, $state) {
 
-	$scope.showDetails = function(){
-		$state.go('location');
-	}
 
 })
 
