@@ -5,7 +5,7 @@
 
 $signedRequest = isset($_REQUEST['signed_request']) ? $_REQUEST['signed_request'] : '' ;
 
-$consumer_secret = '3913780078500263274';
+$consumer_secret = 'YOUR SECRET KEY HERE';
 
 if ($signedRequest == null || $consumer_secret == null) {
    die("Error: Signed Request or Consumer Secret not found");
